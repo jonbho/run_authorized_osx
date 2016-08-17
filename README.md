@@ -11,7 +11,7 @@ It just invokes `gcc` to build, including the `Security` OS X framework to acces
 USAGE
 -----
 * Invoke as `run_authorized_osx whatever command you want`, where `whatever command you want` is what you want to run authorized.
-* This will ask for admin rights to run the command `whatever command you want`.
+* This will ask for admin rights to run the command `whatever command you want`, bringing up the common graphical "admin password" dialog.
 * If the user does not enter the right password, the command will not be run.
 * Exit status is -1 if there is any issue obtaining authorization from the user, or whatever the command returns in any other case.
 * The first parameter given is taken as the command to be executed, the rest are passed in as arguments to that command.

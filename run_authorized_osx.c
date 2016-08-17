@@ -69,12 +69,10 @@ int run_authorized(int argc, char *prog_and_args[])
     return 0;
 }
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     if (argc >= 2)
-    {
         return run_authorized(argc - 1, argv + 1);
-    }
 
     return 0;
 }

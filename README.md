@@ -6,7 +6,7 @@ BUILDING
 * `git clone https://github.com/jonbho/run_authorized_osx.git`
 * `make`
 
-It just invokes `gcc` to build, includint the `Security` OS X framework to access the required APIs.
+It just invokes `gcc` to build, including the `Security` OS X framework to access the required APIs.
 
 USAGE
 -----
@@ -15,12 +15,12 @@ USAGE
 * If the user does not enter the right password, the command will not be run.
 * Exit status is -1 if there is any issue obtaining authorization from the user, or whatever the command returns in any other case.
 * The first parameter given is taken as the command to be executed, the rest are passed in as arguments to that command.
-* The $PATH variable is **not** checked to run the command, provide a full path if necessary.
+* The $PATH variable is **not** checked to run the command, you need to provide the full path to the executable.
 
 IMPORTANT NOTE
 --------------
 Unfortunately, the main API used by this little utility, `AuthorizationExecuteWithPrivileges`, is **deprecated**
-by Apple :( Thus, it will stop working at some point in the future. The suppoted alternative, SMJobBless, is
+by Apple :( Thus, it will stop working at some point in the (near) future. The suppoted alternative, SMJobBless, is
 a lot less flexible, can only be used inside an app bundle, etc...
 
 FUTURE EVOLUTION

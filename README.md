@@ -4,6 +4,7 @@ run_authorized_osx -- Ask for authorization and run command in OS X
 BUILDING
 --------
 * `git clone https://github.com/jonbho/run_authorized_osx.git`
+* `cd run_authorized_osx`
 * `make`
 
 It just invokes `gcc` to build, including the `Security` OS X framework to access the required APIs.

@@ -50,6 +50,10 @@ int run_authorized(int argc, char *prog_and_args[])
 
     status = AuthorizationExecuteWithPrivileges(authorizationRef, prog_and_args[0], kAuthorizationFlagDefaults, args, &pipe);
 
+    // Wait for authorized process to finish
+    int stat;
+    wait(&stat);
+
     // Release memory
     free(args);
 
